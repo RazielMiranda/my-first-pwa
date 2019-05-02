@@ -5,15 +5,7 @@ layout: null
 const staticCacheName = 'rz-codelab-{{ site.time | date: "%Y-%m-%d-%H-%M" }}';
 
 const filesToCache = [
-  {% for page in site.pages_to_cache %}
-    '{{ page }}',
-  {% endfor %}
-  {% for post in site.posts limit: 6%}
-    '{{ post.url }}',
-  {% endfor %}
-  {% for asset in site.files_to_cache %}
-    '{{ asset }}',
-  {% endfor %}
+index.html
 ];
 
 // Cache on install
